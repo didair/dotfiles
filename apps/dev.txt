@@ -6,7 +6,6 @@ python-pip
 nodejs
 npm
 nvm
-bun
 
 # Development tools
 docker
