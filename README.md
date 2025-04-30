@@ -15,14 +15,14 @@ cd ~/dotfiles
 chmod +x install.sh update.sh scripts/*.sh */setup.sh
 
 # Run the installation script
-./install.sh [--minimal|--full] [--desktop|--thinkpad]
+./install.sh [--minimal|--full] [--(name)]
 ```
 
 ### Installation options:
 
 - `--minimal`: Installs only the base configuration without desktop environment
 - `--full`: Installs everything including desktop environment (default)
-- `--desktop` or `--thinkpad`: Installs PC-specific configurations and packages
+- `--[name]`: Installs PC-specific configurations and packages
 
 ## Updating
 
@@ -30,22 +30,13 @@ To update your dotfiles on an existing system:
 
 ```bash
 cd ~/dotfiles
-./update.sh [--pull] [--desktop|--thinkpad]
+./update.sh [--pull] [--(name)]
 ```
 
 ### Update options:
 
 - `--pull`: Pulls latest changes from the Git repository before updating
-- `--desktop` or `--thinkpad`: Updates PC-specific configurations
-
-## Backing up Current Configuration
-
-To back up your current configurations to the repository:
-
-```bash
-cd ~/dotfiles
-./scripts/backup.sh [--desktop|--thinkpad]
-```
+- `--(name)`: Updates PC-specific configurations
 
 ## Configuration Details
 

@@ -1,7 +1,7 @@
 # Desktop environment packages
 
 # Window manager and desktop
-i3-gaps
+i3-wm
 i3status
 i3blocks
 rofi
