@@ -1,0 +1,24 @@
+# Development tools and programming languages
+
+# Languages and runtimes
+python
+python-pip
+nodejs
+npm
+nvm
+bun
+
+# Development tools
+docker
+docker-compose
+vscode
+cmake
+make
+lazygit
+
+# Language servers for neovim
+typescript-language-server
+
+# API tools
+postman-bin
+insomnia

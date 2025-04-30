@@ -1,0 +1,29 @@
+# Base packages for all Arch Linux installations
+
+# System utilities
+base-devel
+git
+wget
+curl
+rsync
+htop
+neofetch
+openssh
+man-db
+usbutils
+unzip
+zip
+
+# Shell and terminal
+zsh
+zsh-completions
+zsh-syntax-highlighting
+ghostty
+tmux
+
+# Editor
+neovim
+
+# Network tools
+networkmanager
+network-manager-applet

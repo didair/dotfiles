@@ -1,0 +1,51 @@
+# General
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+*_backup_*
+
+# Package lists generated during backup
+apps/installed-*.txt
+
+# Credentials and sensitive information
+*_token
+*_key
+*.pem
+*.key
+id_rsa*
+*.password
+*auth*
+*secret*
+*credential*
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Compiled files
+*.o
+*.so
+*.pyc
+__pycache__/
+*.class
+
+# User customization files that might contain sensitive information
+# but should be backed up separately
+zsh/.z
