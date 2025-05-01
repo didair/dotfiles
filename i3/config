@@ -2,7 +2,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles and bar
 font pango:JetBrains Mono 10
@@ -143,7 +143,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
-# i3-gaps specific configuration
+# gaps configuration
 gaps inner 10
 gaps outer 0
 smart_gaps on
@@ -157,7 +157,7 @@ bar {
     status_command i3status
     position top
     tray_output primary
-    
+
     colors {
         background #222222
         statusline #ffffff
