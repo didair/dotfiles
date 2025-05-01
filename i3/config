@@ -10,6 +10,9 @@ font pango:JetBrains Mono 10
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+# Startup commands
+exec_always --no-startup-id xrandr --output Virtual-1 --mode 1680x1050
+
 # start a terminal
 bindsym $mod+Return exec ghostty
 
