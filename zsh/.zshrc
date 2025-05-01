@@ -76,6 +76,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Git aliases
+alias lg="lazygit"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
