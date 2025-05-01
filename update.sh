@@ -53,9 +53,9 @@ update_app() {
 }
 
 # Update configurations for all apps
+update_app "i3"
 update_app "neovim"
 update_app "zsh"
-update_app "i3"
 # Add more as needed
 
 # Install any new packages from app lists
