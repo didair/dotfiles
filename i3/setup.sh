@@ -71,4 +71,7 @@ if [ -d "$SCRIPT_DIR/wallpapers" ]; then
   cp -r "$SCRIPT_DIR/wallpapers/"* "${XDG_DATA_HOME:-$HOME/.local/share}/wallpapers/"
 fi
 
+sudo systemctl enable lightdm.service
+sudo systemctl start lightdm.service
+
 echo "i3 setup completed successfully!"

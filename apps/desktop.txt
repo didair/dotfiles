@@ -4,6 +4,8 @@
 i3-wm
 i3status
 i3blocks
+i3lock-color
+terminator
 rofi
 picom
 feh
@@ -13,6 +15,7 @@ xorg-xinit
 xorg-xrandr
 lightdm
 lightdm-gtk-greeter
+lxappearance
 
 # Audio
 pulseaudio
