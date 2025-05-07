@@ -58,6 +58,10 @@ if [ -f "$HOME/.zshrc" ]; then
   cp "$HOME/.zshrc" "$backup_dir/"
 fi
 
+if [ -d "$CONFIG_HOME/picom" ]; then
+  cp -r "$CONFIG_HOME/picom" "$backup_dir/"
+fi
+
 # ... similar for other config files
 
 echo "Backup created at $backup_dir"
@@ -142,6 +146,11 @@ fi
 # Setup i3 or other window manager
 if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/i3/setup.sh" ]; then
   bash "$DOTFILES_DIR/i3/setup.sh"
+fi
+
+# Setup Picom
+if [ -f "$DOTFILES_DIR/picom/setup.sh" ]; then
+  bash "$DOTFILES_DIR/picom/setup.sh"
 fi
 
 # Setup git global configuration

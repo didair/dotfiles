@@ -56,6 +56,7 @@ update_app() {
 update_app "i3"
 update_app "neovim"
 update_app "zsh"
+update_app "picom"
 # Add more as needed
 
 # Install any new packages from app lists
