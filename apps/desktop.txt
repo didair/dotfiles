@@ -16,6 +16,7 @@ xorg-xrandr
 lightdm
 lightdm-gtk-greeter
 lxappearance
+xclip
 
 # Audio
 pulseaudio
@@ -28,7 +29,7 @@ thunar
 evince
 mpv
 feh
-zen-browser-avx2-bin
+bitwarden
 
 # Fonts
 ttf-dejavu
