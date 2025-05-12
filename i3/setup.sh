@@ -49,11 +49,6 @@ create_link() {
 # Link i3 configuration file
 create_link "$SCRIPT_DIR/config" "$I3_CONFIG_DIR/config"
 
-# Link i3status configuration if it exists
-if [ -f "$SCRIPT_DIR/i3status.conf" ]; then
-  create_link "$SCRIPT_DIR/i3status.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/i3status/config"
-fi
-
 # Link i3blocks configuration if it exists
 if [ -f "$SCRIPT_DIR/i3blocks.conf" ]; then
   create_link "$SCRIPT_DIR/i3blocks.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/i3blocks/config"

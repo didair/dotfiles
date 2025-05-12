@@ -50,7 +50,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 else
   if [ "$UPDATE_MODE" = true ]; then
     echo "Updating Oh My Zsh..."
-    omz update
+    # omz update
   fi
 fi
 

@@ -80,12 +80,12 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Define names for default workspaces
-set $ws1 "1: Terminal"
-set $ws2 "2: Web"
-set $ws3 "3: Code"
-set $ws4 "4: Files"
-set $ws5 "5: Media"
-set $ws6 "6: Comms"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -158,28 +158,6 @@ gaps inner 8
 gaps outer 8
 smart_gaps off
 smart_borders on
-
-# Rounded corners if you have the right compositor
-# Not supported by default i3, but some patched versions support it
-
-# Start i3bar to display a workspace bar
-bar {
-    status_command i3status
-    position top
-    tray_output primary
-
-    colors {
-        background #000000
-        statusline #ffffff
-        separator  #666666
-
-        focused_workspace  #4c7899 #285577 #ffffff
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
-    }
-}
 
 # Screen locking
 bindsym $mod+shift+x exec i3lock -c 000000

@@ -5,6 +5,7 @@ i3-wm
 i3status
 i3blocks
 i3lock-color
+betterlockscreen
 terminator
 rofi
 picom
@@ -17,6 +18,7 @@ lightdm
 lightdm-gtk-greeter
 lxappearance
 xclip
+networkmanager
 
 # Audio
 pulseaudio
