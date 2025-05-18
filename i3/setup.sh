@@ -46,6 +46,9 @@ create_link() {
   echo "Linked $src to $dest"
 }
 
+echo "Configure lock screen"
+betterlockscreen -u ${XDG_DATA_HOME:-$HOME/.local/share}/wallpapers/waves-light.jpg
+
 # Link i3 configuration file
 create_link "$SCRIPT_DIR/config" "$I3_CONFIG_DIR/config"
 

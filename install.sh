@@ -153,6 +153,11 @@ if [ -f "$DOTFILES_DIR/picom/setup.sh" ]; then
   bash "$DOTFILES_DIR/picom/setup.sh"
 fi
 
+# Setup Polybar
+if [ -f "$DOTFILES_DIR/picom/setup.sh" ]; then
+  bash "$DOTFILES_DIR/polybar/setup.sh"
+fi
+
 # Setup git global configuration
 git config --global user.name "Andreas Ekström"
 git config --global user.email "didair@msn.com"

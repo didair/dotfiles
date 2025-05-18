@@ -19,7 +19,7 @@ exec --no-startup-id nm-applet
 
 # Set wallpaper with feh
 exec --no-startup-id feh --bg-fill ${XDG_DATA_HOME:-$HOME/.local/share}/wallpapers/waves-light.jpg
-
+exec_always --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec_always --no-startup-id xrandr --output Virtual-1 --mode 1680x1050
 exec_always autotiling -w 1 3 5 7 9
 
@@ -160,7 +160,7 @@ smart_gaps off
 smart_borders on
 
 # Screen locking
-bindsym $mod+shift+x exec i3lock -c 000000
+bindsym $mod+shift+x exec betterlockscreen -l dim
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%

@@ -9,7 +9,6 @@ nvm
 
 # Development tools
 docker
-docker-compose
 vscode
 cmake
 make

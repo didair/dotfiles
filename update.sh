@@ -57,6 +57,7 @@ update_app "i3"
 update_app "neovim"
 update_app "zsh"
 update_app "picom"
+update_app "polybar"
 # Add more as needed
 
 # Install any new packages from app lists
