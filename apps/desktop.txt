@@ -1,24 +1,19 @@
 # Desktop environment packages
 
 # Window manager and desktop
-i3-wm
-i3blocks
-i3lock-color
+hyprland
+wayland
+xdg-desktop-portal-hyprland
+hyprpaper
+waybar
 betterlockscreen
 terminator
 rofi
-picom
-feh
 dunst
-xorg-server
-xorg-xinit
-xorg-xrandr
 lightdm
 lightdm-gtk-greeter
 lxappearance
-xclip
 networkmanager
-polybar
 
 # Audio
 pulseaudio
