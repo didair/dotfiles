@@ -3,9 +3,7 @@
 # Languages and runtimes
 python
 python-pip
-nodejs
-npm
-nvm
+nvm-git
 
 # Development tools
 docker
@@ -13,10 +11,11 @@ vscode
 cmake
 make
 lazygit
+lazydocker-bin
 
 # Language servers for neovim
 typescript-language-server
 
 # API tools
 postman-bin
-insomnia
+insomnia-bin

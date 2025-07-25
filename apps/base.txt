@@ -7,12 +7,17 @@ wget
 curl
 rsync
 htop
+wtype
+wl-clipboard
 neofetch
 openssh
 man-db
 usbutils
 unzip
 zip
+electron
+electron33-bin
+libsecret
 
 # Shell and terminal
 zsh

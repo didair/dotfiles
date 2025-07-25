@@ -1,0 +1,115 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, "Noto Sans", sans-serif;
+    font-size: 100%;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+tooltip {
+  padding: 6px 12px;
+	background: #1e1e2e;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #11111b;
+	color: #cba6f7;
+}
+
+#waybar .fa,
+#waybar .fas,
+#waybar .far,
+#waybar .fab {
+  font-size: 20px; /* Match your text size */
+}
+
+/* Island/container style */
+#workspaces,
+#hardware,
+#custom-media,
+#tray {
+  background-color: black;
+  border-radius: 40px;
+  padding: 4px 12px;
+}
+
+#workspaces button,
+#hardware button,
+#tray button {
+  padding: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+button {
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+}
+
+#workspaces button {
+  color: #6E6A86;
+  box-shadow: none;
+  text-shadow: none;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+   
+#workspaces button.active {
+	color: white;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+  
+#workspaces button.focused {
+	color: #d8dee9;
+}
+   
+#workspaces button.urgent {
+	color: #11111b;
+	border-radius: 10px;
+}
+	   
+#workspaces button:hover {
+	color: whitesmoke;
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#custom-power {
+  font-size: 20px;
+}
+
+#pulseaudio,
+#network {
+  margin-right: 12px;
+}
+
+#pulseaudio > i {
+  font-size: 20px;
+}

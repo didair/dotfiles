@@ -1,35 +1,45 @@
 # Desktop environment packages
 
 # Window manager and desktop
-hyprland
 wayland
+hyprland
 xdg-desktop-portal-hyprland
 hyprpaper
+hyprshot
+hyprlock
 waybar
-betterlockscreen
+swaylock
 terminator
-rofi
-dunst
+wofi
 lightdm
 lightdm-gtk-greeter
 lxappearance
 networkmanager
+swaync
+gvfs
+gvfs-smb
+samba
+smbclient
 
 # Audio
 pulseaudio
 pulseaudio-alsa
 pavucontrol
+playerctl
 
 # Applications
-zen-browser
+zen-browser-bin
 firefox
 google-chrome
-thunar
 evince
 mpv
 feh
 bitwarden
 spotify-launcher
+mailspring-bin
+nautilus
+remmina-git
+gnome-keyring
 
 # Fonts
 ttf-dejavu
