@@ -11,8 +11,7 @@ waybar
 swaylock
 terminator
 wofi
-lightdm
-lightdm-gtk-greeter
+greetd-regreet
 lxappearance
 networkmanager
 swaync
