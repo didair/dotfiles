@@ -1,0 +1,24 @@
+# General settings
+width=600
+height=450
+location=center
+y-offset=0
+x-offset=0
+always_center=true
+
+# Behavior
+show=drun
+prompt=
+insensitive=true
+term=foot
+allow_markup=true
+
+# UI behavior
+no_actions=true
+print_command=true
+hide_scroll=true
+allow_images=true
+
+# Styling
+style=~/dotfiles/wofi/style.css
+

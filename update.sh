@@ -41,7 +41,7 @@ fi
 # Update system packages
 echo "Updating system packages..."
 sudo pacman -Syu --noconfirm
-yay -Syu --noconfirm
+paru -Syu --noconfirm
 
 # Function to update application-specific configurations
 update_app() {
@@ -53,12 +53,11 @@ update_app() {
 }
 
 # Update configurations for all apps
-update_app "i3"
+update_app "hypr"
+update_app "waybar"
+update_app "wofi"
 update_app "neovim"
 update_app "zsh"
-update_app "picom"
-update_app "polybar"
-# Add more as needed
 
 # Install any new packages from app lists
 install_new_packages() {
@@ -70,9 +69,9 @@ install_new_packages() {
       [[ "$package" =~ ^# ]] || [ -z "$package" ] && continue
       
       # Check if package is installed
-      if ! pacman -Qi "$package" &> /dev/null && ! yay -Qi "$package" &> /dev/null; then
+      if ! pacman -Qi "$package" &> /dev/null && ! paru -Qi "$package" &> /dev/null; then
         echo "Installing new package: $package"
-        yay -S --needed --noconfirm "$package"
+        paru -S --needed --noconfirm "$package"
       fi
     done < "$file"
   fi
@@ -87,5 +86,8 @@ install_new_packages "$DOTFILES_DIR/apps/dev.txt"
 if [ -n "$PC_TYPE" ]; then
   install_new_packages "$DOTFILES_DIR/apps/custom-$PC_TYPE.txt"
 fi
+
+echo "Reload hyprland configuration files.."
+hyprctl reload
 
 echo "Update completed successfully!"

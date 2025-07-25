@@ -70,13 +70,13 @@ echo "Backup created at $backup_dir"
 echo "Updating system packages..."
 sudo pacman -Syu --noconfirm
 
-# Install package manager helper (yay) if not installed
-if ! command -v yay &> /dev/null; then
-  echo "Installing yay AUR helper..."
+# Install package manager helper (paru) if not installed
+if ! command -v paru &> /dev/null; then
+  echo "Installing paru AUR helper..."
   sudo pacman -S --needed git base-devel --noconfirm
-  git clone https://aur.archlinux.org/yay.git /tmp/yay
-  (cd /tmp/yay && makepkg -si --noconfirm)
-  rm -rf /tmp/yay
+  git clone https://aur.archlinux.org/paru.git /tmp/paru
+  (cd /tmp/paru && makepkg -si --noconfirm)
+  rm -rf /tmp/paru
 fi
 
 # Install packages from app lists
@@ -88,7 +88,7 @@ install_packages() {
       # Skip comments and empty lines
       [[ "$package" =~ ^# ]] || [ -z "$package" ] && continue
       echo "Installing: $package"
-      yay -S --needed --noconfirm "$package"
+      paru -S --needed --noconfirm "$package"
     done < "$file"
   fi
 }
@@ -143,19 +143,19 @@ if [ -f "$DOTFILES_DIR/zsh/setup.sh" ]; then
   bash "$DOTFILES_DIR/zsh/setup.sh"
 fi
 
-# Setup i3 or other window manager
-if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/i3/setup.sh" ]; then
-  bash "$DOTFILES_DIR/i3/setup.sh"
+# Setup hyprland
+if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/hypr/setup.sh" ]; then
+  bash "$DOTFILES_DIR/hypr/setup.sh"
 fi
 
-# Setup Picom
-if [ -f "$DOTFILES_DIR/picom/setup.sh" ]; then
-  bash "$DOTFILES_DIR/picom/setup.sh"
+# Setup Waybar
+if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/waybar/setup.sh" ]; then
+  bash "$DOTFILES_DIR/waybar/setup.sh"
 fi
 
-# Setup Polybar
-if [ -f "$DOTFILES_DIR/picom/setup.sh" ]; then
-  bash "$DOTFILES_DIR/polybar/setup.sh"
+# Setup Wofi
+if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/wofi/setup.sh" ]; then
+  bash "$DOTFILES_DIR/wofi/setup.sh"
 fi
 
 # Setup git global configuration
