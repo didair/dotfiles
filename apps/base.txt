@@ -18,6 +18,8 @@ zip
 electron
 electron33-bin
 libsecret
+samba
+smbclient
 
 # Shell and terminal
 zsh

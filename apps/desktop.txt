@@ -4,6 +4,7 @@
 wayland
 hyprland
 xdg-desktop-portal-hyprland
+xwaylandvideobridge
 hyprpaper
 hyprshot
 hypridle
@@ -19,8 +20,6 @@ networkmanager
 swaync
 gvfs
 gvfs-smb
-samba
-smbclient
 
 # Audio
 pulseaudio
@@ -41,6 +40,7 @@ mailspring-bin
 nautilus
 remmina-git
 gnome-keyring
+vesktop-bin
 
 # Fonts
 ttf-dejavu

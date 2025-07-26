@@ -77,6 +77,7 @@ alias ....="cd ../../.."
 
 # Git aliases
 alias lg="lazygit"
+alias ld="lazydocker"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
@@ -88,7 +89,7 @@ alias gco="git checkout"
 alias glog="git log --oneline --decorate --graph"
 
 # Docker aliases
-alias dc="docker-compose"
+alias dc="docker compose"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
 
