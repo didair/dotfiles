@@ -161,3 +161,5 @@ extract() {
   fi
 }
 
+
+PATH=~/.console-ninja/.bin:$PATH
