@@ -6,7 +6,9 @@ hyprland
 xdg-desktop-portal-hyprland
 hyprpaper
 hyprshot
+hypridle
 hyprlock
+hyprpicker
 waybar
 swaylock
 terminator
