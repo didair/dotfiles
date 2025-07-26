@@ -1,2 +1,0 @@
-# Custom thinkpad drivers
-xf86-input-libinput

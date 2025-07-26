@@ -1,41 +1,12 @@
 #!/bin/bash
 
 # Arch Linux Dotfiles Installer
-# Usage: ./install.sh [--minimal|--full] [--desktop|--thinkpad]
+# Usage: ./install.sh
 
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-INSTALL_TYPE="full"
-PC_TYPE=""
-
-# Process arguments
-for arg in "$@"; do
-  case $arg in
-    --minimal)
-      INSTALL_TYPE="minimal"
-      shift
-      ;;
-    --full)
-      INSTALL_TYPE="full"
-      shift
-      ;;
-    --desktop)
-      PC_TYPE="desktop"
-      shift
-      ;;
-    --thinkpad)
-      PC_TYPE="thinkpad"
-      shift
-      ;;
-    *)
-      echo "Unknown option: $arg"
-      echo "Usage: ./install.sh [--minimal|--full] [--desktop|--thinkpad]"
-      exit 1
-      ;;
-  esac
-done
 
 # Check if running as root
 if [ "$EUID" -eq 0 ]; then
@@ -56,10 +27,6 @@ fi
 
 if [ -f "$HOME/.zshrc" ]; then
   cp "$HOME/.zshrc" "$backup_dir/"
-fi
-
-if [ -d "$CONFIG_HOME/picom" ]; then
-  cp -r "$CONFIG_HOME/picom" "$backup_dir/"
 fi
 
 # ... similar for other config files
@@ -144,17 +111,17 @@ if [ -f "$DOTFILES_DIR/zsh/setup.sh" ]; then
 fi
 
 # Setup hyprland
-if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/hypr/setup.sh" ]; then
+if [ -f "$DOTFILES_DIR/hypr/setup.sh" ]; then
   bash "$DOTFILES_DIR/hypr/setup.sh"
 fi
 
 # Setup Waybar
-if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/waybar/setup.sh" ]; then
+if [ -f "$DOTFILES_DIR/waybar/setup.sh" ]; then
   bash "$DOTFILES_DIR/waybar/setup.sh"
 fi
 
 # Setup Wofi
-if [ "$INSTALL_TYPE" = "full" ] && [ -f "$DOTFILES_DIR/wofi/setup.sh" ]; then
+if [ -f "$DOTFILES_DIR/wofi/setup.sh" ]; then
   bash "$DOTFILES_DIR/wofi/setup.sh"
 fi
 

@@ -7,7 +7,6 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PULL_CHANGES=false
-PC_TYPE=""
 
 # Process arguments
 for arg in "$@"; do
@@ -16,17 +15,9 @@ for arg in "$@"; do
       PULL_CHANGES=true
       shift
       ;;
-    --desktop)
-      PC_TYPE="desktop"
-      shift
-      ;;
-    --thinkpad)
-      PC_TYPE="thinkpad"
-      shift
-      ;;
     *)
       echo "Unknown option: $arg"
-      echo "Usage: ./update.sh [--pull] [--desktop|--thinkpad]"
+      echo "Usage: ./update.sh [--pull]"
       exit 1
       ;;
   esac
@@ -81,11 +72,6 @@ install_new_packages() {
 install_new_packages "$DOTFILES_DIR/apps/base.txt"
 install_new_packages "$DOTFILES_DIR/apps/desktop.txt"
 install_new_packages "$DOTFILES_DIR/apps/dev.txt"
-
-# Install PC-specific packages if specified
-if [ -n "$PC_TYPE" ]; then
-  install_new_packages "$DOTFILES_DIR/apps/custom-$PC_TYPE.txt"
-fi
 
 echo "Reload hyprland configuration files.."
 hyprctl reload
