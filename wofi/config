@@ -21,4 +21,3 @@ allow_images=true
 
 # Styling
 style=~/dotfiles/wofi/style.css
-

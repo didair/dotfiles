@@ -48,5 +48,6 @@ create_link() {
 create_link "$SCRIPT_DIR/hypridle.conf" "$XDG_CONFIG_HOME/hypr/hypridle.conf"
 create_link "$SCRIPT_DIR/hyprland.conf" "$XDG_CONFIG_HOME/hypr/hyprland.conf"
 create_link "$SCRIPT_DIR/hyprlock.conf" "$XDG_CONFIG_HOME/hypr/hyprlock.conf"
+create_link "$SCRIPT_DIR/hyprpaper.conf" "$XDG_CONFIG_HOME/hypr/hyprpaper.conf"
 
 echo "Hyprland setup completed successfully!"

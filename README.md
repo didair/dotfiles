@@ -8,21 +8,15 @@ To install dotfiles on a new system:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+git clone https://github.com/didair/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 # Make scripts executable
-chmod +x install.sh update.sh scripts/*.sh */setup.sh
+chmod +x install.sh update.sh
 
 # Run the installation script
-./install.sh [--minimal|--full] [--(name)]
+./install.sh
 ```
-
-### Installation options:
-
-- `--minimal`: Installs only the base configuration without desktop environment
-- `--full`: Installs everything including desktop environment (default)
-- `--[name]`: Installs PC-specific configurations and packages
 
 ## Updating
 
@@ -30,13 +24,12 @@ To update your dotfiles on an existing system:
 
 ```bash
 cd ~/dotfiles
-./update.sh [--pull] [--(name)]
+./update.sh [--pull]
 ```
 
 ### Update options:
 
 - `--pull`: Pulls latest changes from the Git repository before updating
-- `--(name)`: Updates PC-specific configurations
 
 ## Configuration Details
 
@@ -44,8 +37,9 @@ cd ~/dotfiles
 
 1. **Neovim**: Modern Neovim configuration with LSP support
 2. **Zsh**: Shell configuration with Oh My Zsh and useful plugins
-3. **i3**: Tiling window manager configuration
-4. **Package Management**: Lists of packages for different purposes
+3. **Hyprland**: Tiling window manager configuration
+4. **waybar**: Top bar inspired by Apples dynamic island
+4. **wofi**: Rofi style launcher
 
 ### Customization
 
@@ -62,14 +56,6 @@ To add configuration for a new application:
 2. Add configuration files to the directory
 3. Create a `setup.sh` script for linking the files
 4. Update the main `install.sh` and `update.sh` scripts to include the new application
-
-## PC-Specific Configuration
-
-For machine-specific settings, you can:
-
-1. Create custom package lists in `apps/custom-[name].txt`
-2. Use the `--[name]` flag when running the installation or update scripts
-3. Create machine-specific branches if you need more divergent configurations
 
 ## Troubleshooting
 
