@@ -22,8 +22,9 @@ tooltip {
 #waybar .fa,
 #waybar .fas,
 #waybar .far,
-#waybar .fab {
-  font-size: 20px; /* Match your text size */
+#waybar .fab,
+#waybar i {
+  font-size: 26px;
 }
 
 /* Island/container style */
@@ -61,21 +62,21 @@ button:hover {
   text-shadow: none;
   transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
-   
+
 #workspaces button.active {
 	color: white;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
-  
+
 #workspaces button.focused {
 	color: #d8dee9;
 }
-   
+
 #workspaces button.urgent {
 	color: #11111b;
 	border-radius: 10px;
 }
-	   
+
 #workspaces button:hover {
 	color: whitesmoke;
   border-radius: 15px;
@@ -94,11 +95,11 @@ button:hover {
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+  -gtk-icon-effect: highlight;
 }
 
 #custom-power {

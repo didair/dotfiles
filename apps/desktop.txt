@@ -12,6 +12,7 @@ hyprlock
 hyprpicker
 waybar
 swaylock
+wlogout
 terminator
 wofi
 greetd-regreet

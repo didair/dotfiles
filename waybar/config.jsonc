@@ -167,17 +167,17 @@
       "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "<span>{icon}</span> {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+      // "scroll-step": 1, // %, can be a float
+      "format": "<span>{icon}</span> {volume}% {format_source}",
+      "format-bluetooth": "{icon} {volume}%  {format_source}",
+      "format-bluetooth-muted": "  {icon} {format_source}",
+      "format-muted": "  {format_source}",
+      "format-source": " {volume}%",
+      "format-source-muted": "",
+      "format-icons": {
+          "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{text}",
@@ -195,16 +195,9 @@
         "exec": "/usr/bin/python3 $HOME/dotfiles/waybar/mediaplayer.py --player spotify 2> /dev/null"
     },
     "custom/power": {
-        "format" : "⏻ ",
-        "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-        "menu-actions": {
-          "shutdown": "shutdown",
-          "reboot": "reboot",
-          "suspend": "systemctl suspend",
-          "hibernate": "systemctl hibernate"
-        }
+      "format" : "⏻ ",
+      "tooltip": false,
+      "on-click": "wlogout -l ~/dotfiles/wlogout/layout --css ~/dotfiles/wlogout/style.css"
     },
     "hyprland/workspaces": {
       "active-only": false,
