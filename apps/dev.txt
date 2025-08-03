@@ -7,7 +7,7 @@ nvm-git
 
 # Development tools
 docker
-vscode
+visual-studio-code-bin
 cmake
 make
 lazygit
