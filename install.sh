@@ -60,19 +60,9 @@ install_packages() {
   fi
 }
 
-# Install base packages for all configurations
 install_packages "$DOTFILES_DIR/apps/base.txt"
-
-# Install packages based on installation type
-if [ "$INSTALL_TYPE" = "full" ]; then
-  install_packages "$DOTFILES_DIR/apps/desktop.txt"
-  install_packages "$DOTFILES_DIR/apps/dev.txt"
-fi
-
-# Install PC-specific packages if specified
-if [ -n "$PC_TYPE" ]; then
-  install_packages "$DOTFILES_DIR/apps/custom-$PC_TYPE.txt"
-fi
+install_packages "$DOTFILES_DIR/apps/desktop.txt"
+install_packages "$DOTFILES_DIR/apps/dev.txt"
 
 # Create symbolic links for configuration files
 create_link() {
@@ -99,6 +89,11 @@ create_link() {
 
 # Run application-specific setup scripts
 echo "Setting up applications..."
+
+# Setup greetd and regreet
+if [ -f "$DOTFILES_DIR/regreet/setup.sh" ]; then
+  bash "$DOTFILES_DIR/regreet/setup.sh"
+fi
 
 # Setup Neovim
 if [ -f "$DOTFILES_DIR/neovim/setup.sh" ]; then

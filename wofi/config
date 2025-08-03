@@ -18,6 +18,3 @@ no_actions=true
 print_command=true
 hide_scroll=true
 allow_images=true
-
-# Styling
-style=~/dotfiles/wofi/style.css

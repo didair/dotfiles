@@ -14,6 +14,7 @@ waybar
 swaylock
 wlogout
 terminator
+syshud
 wofi
 greetd-regreet
 lxappearance
@@ -23,8 +24,11 @@ gvfs
 gvfs-smb
 
 # Audio
-pulseaudio
-pulseaudio-alsa
+pipewire
+pipewire-audio
+pipewire-pulse
+pipewire-alsa
+wireplumber
 pavucontrol
 playerctl
 

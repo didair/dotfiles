@@ -24,7 +24,7 @@ tooltip {
 #waybar .far,
 #waybar .fab,
 #waybar i {
-  font-size: 26px;
+  font-size: 22px;
 }
 
 /* Island/container style */
@@ -103,7 +103,7 @@ button:hover {
 }
 
 #custom-power {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #pulseaudio,
@@ -112,5 +112,11 @@ button:hover {
 }
 
 #pulseaudio > i {
-  font-size: 20px;
+  font-size: 22px;
+}
+
+#custom-notification {
+  font-size: 22px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
