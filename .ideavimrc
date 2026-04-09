@@ -1,0 +1,110 @@
+" =========================
+" Basic Vim behavior
+" =========================
+set nocompatible
+set number
+set relativenumber
+set showcmd
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set surround
+set clipboard+=unnamedplus
+set scrolloff=5
+set sidescrolloff=5
+set easymotion
+set quickscope
+ 
+" Leader key
+let mapleader=" "
+ 
+" =========================
+" Better movement
+" =========================
+nnoremap j gj
+nnoremap k gk
+ 
+" =========================
+" Commenting (vim-commentary style)
+" =========================
+nnoremap gcc :action CommentByLineComment<CR>
+xnoremap gc  :action CommentByLineComment<CR>
+nnoremap gcb :action CommentByBlockComment<CR>
+xnoremap gcb :action CommentByBlockComment<CR>
+ 
+" =========================
+" IDE navigation
+" =========================
+nnoremap <leader>e :action RevealIn<CR>
+nnoremap <leader>f :action FindInPath<CR>
+nnoremap <leader>r :action RenameElement<CR>
+nnoremap <leader>a :action ShowIntentionActions<CR>
+ 
+" Go to definition / usages
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action FindUsages<CR>
+ 
+" =========================
+" File & window management
+" =========================
+nnoremap <leader>w :action SaveAll<CR>
+nnoremap <leader>q :action CloseActiveTab<CR>
+ 
+" Split navigation (IDE splits, not Vim splits)
+nnoremap <C-h> :action PrevSplitter<CR>
+nnoremap <C-l> :action NextSplitter<CR>
+nnoremap <C-j> :action NextSplitter<CR>
+nnoremap <C-k> :action PrevSplitter<CR>
+ 
+" =========================
+" Search / navigation
+" =========================
+nnoremap <leader>p :action GotoFile<CR>
+nnoremap <leader>s :action SearchEverywhere<CR>
+ 
+" =========================
+" Quality-of-life
+" =========================
+inoremap jk <Esc>
+nnoremap <Esc> :nohlsearch<CR>
+ 
+" Keep visual selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+ 
+" Multiple cursors
+nnoremap <C-n> :action SelectNextOccurrence<CR>
+xnoremap <C-n> :action SelectNextOccurrence<CR>
+nnoremap <C-x> :action SkipOccurrence<CR>
+xnoremap <C-x> :action SkipOccurrence<CR>
+nnoremap <C-p> :action UnselectPreviousOccurrence<CR>
+xnoremap <C-p> :action UnselectPreviousOccurrence<CR>
+nnoremap g<C-n> :action SelectAllOccurrences<CR>
+ 
+" =========================
+" Test running
+" =========================
+ 
+" Run nearest test / describe / file (Shift+Ctrl+F10)
+nnoremap <leader>tn :action RunClass<CR>
+ 
+" Re-run last test
+nnoremap <leader>tl :action Rerun<CR>
+ 
+" Debug nearest test
+nnoremap <leader>td :action DebugClass<CR>
+ 
+" Open test output
+nnoremap <leader>to :action ActivateRunToolWindow<CR>
+ 
+" ====================================
+" Live Template placeholder navigation
+" ====================================
+ 
+" Jump to next placeholder (insert mode)
+inoremap <C-j> <C-j>
+ 
+" Jump to previous placeholder (insert mode)
+inoremap <C-k> <C-S-j>
+
